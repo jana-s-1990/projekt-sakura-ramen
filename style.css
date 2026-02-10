@@ -53,7 +53,7 @@ h2 {
   color: #9f0908;
   text-align: center;
   margin-top: 10px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 h2 span {
   font-size: 16px;
@@ -66,6 +66,7 @@ h2 span {
 @media (min-width:768px) {
   h2 {
     font-size: 64px;
+    margin-bottom: 48px;
   }
   h2 span{
     font-size: 20px;
@@ -74,6 +75,7 @@ h2 span {
 @media (min-width:1280px) {
   h2 {
     font-size: 80px;
+    margin-bottom: 64px;
   }
   h2 span{
     font-size: 24px;
@@ -94,13 +96,14 @@ h3 {
   font-family: "Economica", sans-serif;
   font-size: 32px;
   font-weight: 700;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 8px;
+  margin-bottom: 0px;
 }
 @media (min-width:1280px) {
   h3 {
     font-size: 56px;
-  }  
+    margin-bottom: 16px;
+    }  
 }
 a {
   text-decoration: none;
@@ -167,6 +170,12 @@ footer {
 }
 .flex-direction-column {
   flex-direction: column;
+}
+@media (max-width:767px) {
+  .flex-mobile-fullwidth{
+    flex-direction: column;
+    gap: 32px;
+  }
 }
 .content {
   max-width: 1440px;
@@ -263,18 +272,32 @@ nav ul {
   }
 }
 .distance-between-section {
-  padding: 120px 0;
+  padding: 72px 0;
 }
-.how-to-order-part {
-  width: 25vh;
+@media (min-width:768px) {
+  .distance-between-section {
+    padding: 96px 0;
+  }
+}
+@media (min-width:1280px) {
+  .distance-between-section {
+    padding: 120px 0;
+  }
 }
 .how-to-order-part h3 {
   text-align: center;
 }
 .how-to-order-part img {
-  width: 128px;
+  width: 112px;
   height: 100%;
 }
+@media (min-width:768px) {
+  .how-to-order-part img {
+    width: 128px;
+    height: 100%;
+  }
+}
+
 .menu-margin-bottom {
   margin-bottom: 56px;
 }
