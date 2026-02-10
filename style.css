@@ -105,6 +105,17 @@ h3 {
 a {
   text-decoration: none;
 }
+.logo img{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+@media (min-width:768px) {
+  .logo img{
+    width:64px;
+    height: 64px;
+  } 
+}
 #our-menu {
   background-image: url(img/section_our_menu_bg.jpg);
   background-size: cover;
@@ -160,13 +171,34 @@ footer {
 .content {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 160px 0 160px;
+  padding: 0 16px 0 16px;
+}
+@media (min-width:768px) {
+  .content {
+    padding: 0 24px 0 24px;
+  }
+}
+@media (min-width:1280px) {
+  .content {
+    padding: 0 160px 0 160px;
+  }  
 }
 .nav-bar {
-  padding-top: 12px;
+  padding-top: 16px;
+}
+@media (min-width:768px) {
+  .nav-bar {
+    padding-top: 24px;
+  }
+}
+@media (min-width:1280px) {
+  .nav-bar {
+    padding-top: 32px;
+  } 
 }
 nav ul {
   list-style-type: none;
+  margin: 0;
   li {
     margin: 0 40px;
   }
@@ -183,24 +215,43 @@ nav ul {
     cursor: pointer;
   }
 }
+@media (max-width:900px) {
+  .mobile-hidden{
+    display: none;
+  }
+  nav ul li:last-child {
+    margin-left: 0;
+  }
+}
 .telefon-number::before {
   content: "";
   display: inline-block;
   background-image: url("img/phone.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   margin-right: 8px;
   vertical-align: bottom;
 }
 .tel-button {
   background-color: #9f0908;
-  padding: 6px 10px 8px 10px;
+  padding: 4px 8px 4px 8px;
   border: 2px solid #fff;
-  border-radius: 12px;
+  border-radius: 8px;
   transition: background-color 0.3s ease;
 }
+@media (min-width:768px) {
+  .telefon-number::before {
+    width: 25px;
+    height: 25px;
+  }
+  .tel-button {
+    padding: 6px 10px 8px 10px;
+    border-radius: 12px;
+  }
+}
+
 .tel-button:hover {
   background-color: #3f0707;
   cursor: pointer;
