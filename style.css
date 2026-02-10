@@ -5,17 +5,37 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Raleway", sans-serif;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 400;
   color: #000;
 }
+@media (min-width:768px) {
+  body {
+    font-size: 20px;
+  }  
+}
+@media (min-width:1280px) {
+  body {
+    font-size: 24px;
+  }  
+}
 h1 {
-  font-size: 96px;
+  font-size: 44px;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
   margin-bottom: 10px;
+}
+@media (min-width:768px) {
+  h1 {
+    font-size: 72px;
+  }  
+}
+@media (min-width:1280px) {
+  h1 {
+    font-size: 96px;
+  }  
 }
 .headline {
   margin-top: 15vh;
@@ -27,7 +47,7 @@ h1 {
   text-transform: uppercase;
 }
 h2 {
-  font-size: 80px;
+  font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
   color: #9f0908;
@@ -36,12 +56,28 @@ h2 {
   margin-bottom: 64px;
 }
 h2 span {
-  font-size: 24px;
+  font-size: 16px;
   display: block;
   margin-top: 8px;
   color: black;
   font-weight: 400;
   text-transform: none;
+}
+@media (min-width:768px) {
+  h2 {
+    font-size: 64px;
+  }
+  h2 span{
+    font-size: 20px;
+  }  
+}
+@media (min-width:1280px) {
+  h2 {
+    font-size: 80px;
+  }
+  h2 span{
+    font-size: 24px;
+  }  
 }
 h2 span::before {
   content: "";
@@ -56,10 +92,15 @@ h2 span::before {
 }
 h3 {
   font-family: "Economica", sans-serif;
-  font-size: 56px;
+  font-size: 32px;
   font-weight: 700;
   margin-top: 16px;
   margin-bottom: 16px;
+}
+@media (min-width:1280px) {
+  h3 {
+    font-size: 56px;
+  }  
 }
 a {
   text-decoration: none;
@@ -71,7 +112,7 @@ a {
   background-repeat: no-repeat;
   table {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 24px;
     color: #675e54;
     tr {
       margin-bottom: 8px;
@@ -84,6 +125,11 @@ a {
       width: 35vh;
     }
   }
+}
+@media (min-width:1280px) {
+  #our-menu table{
+    font-size: 32px;
+  }   
 }
 header {
   background-image: url(img/hero_bg.jpg);
