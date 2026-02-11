@@ -63,6 +63,17 @@ h2 span {
   font-weight: 400;
   text-transform: none;
 }
+h2 span::before {
+  content: "";
+  display: inline-block;
+  background-image: url("img/map_marker.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
+  vertical-align: bottom;
+}
 @media (min-width:768px) {
   h2 {
     font-size: 64px;
@@ -70,6 +81,11 @@ h2 span {
   }
   h2 span{
     font-size: 20px;
+  }
+  h2 span::before {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
   }  
 }
 @media (min-width:1280px) {
@@ -79,19 +95,14 @@ h2 span {
   }
   h2 span{
     font-size: 24px;
-  }  
+  } 
+  h2 span::before {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  } 
 }
-h2 span::before {
-  content: "";
-  display: inline-block;
-  background-image: url("img/map_marker.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 28px;
-  height: 28px;
-  margin-right: 8px;
-  vertical-align: bottom;
-}
+
 h3 {
   font-family: "Economica", sans-serif;
   font-size: 32px;
@@ -160,7 +171,15 @@ header {
 }
 footer {
   background-color: #0a141e;
-  padding: 42px 0;
+  padding: 21px 0;
+}
+@media (min-width:768px) {
+  footer {
+    padding: 47px 0;
+  }
+}
+@media (min-width:1280px) {
+    
 }
 .flex {
   display: flex;
@@ -326,6 +345,9 @@ nav ul {
     width: 343px;
   }
 }
+.distance-footer {
+    padding-bottom: 0px;
+  }
 @media (min-width:768px) {
   .menu-img-size {
     width: 352px;
@@ -345,10 +367,11 @@ nav ul {
   .menu-img-gab-left {
     margin-left: 80px;
   }
+  .distance-footer {
+    padding-bottom: 10px;
+  }
 }
-.distance-footer {
-  padding-bottom: 10px;
-}
+
 .googlemaps {
   width: 100%;
   height: 60vh;
@@ -359,12 +382,32 @@ nav ul {
 .social-media-logo a:hover {
   opacity: 0.5;
 }
+
 .social-media-logo img {
-  width: 40px;
+  width: 32px;
   height: auto;
   padding: 0 5px;
 }
-.footer-logo-text img {
-  height: 44px;
-  width: 100%;
+@media (min-width:768px) {
+  .social-media-logo img {
+    width: 40px;
+  }
+}
+@media (max-width:767px) {
+  .logo-hidden-mobile{
+    display: none;
+  }
+  .logo-only-mobile{
+    height: 40px;
+    width: 100%;
+  }
+}
+@media (min-width:768px) {
+  .footer-logo-text img {
+    height: 44px;
+    width: 100%;
+  }
+  .logo-only-mobile{
+    display: none;
+  }
 }
